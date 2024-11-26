@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container my-5">
+    <h1 class="text-center mb-4 text-dark">Nuestros Productos</h1>
+    <p class="text-center text-muted mb-5">Explora nuestra amplia gama de vehículos diseñados para satisfacer todas tus necesidades, desde deportivos hasta elegantes.</p>
+
+    <!-- Grid de Productos -->
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="~/IMG/CarsDeportivo.jpeg" alt="Carro 1" class="product-img">
+            <div class="product-info">
+                <h5 class="product-title">Carro Dodge Viper 9.0 liter Ridge Motorsports</h5>
+                <p class="product-description">Potente y confiable. Ideal para aventuras.</p>
+                <a href="@Url.Action("Detalles1", "Home")" class="btn btn-primary btn-sm">Ver detalles</a>
+                <a href="@Url.Action("Comprar1", "Home")" class="btn btn-primary btn-sm">Comprar</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="~/IMG/CarsF1.jpeg" alt="Carro 2" class="product-img">
+            <div class="product-info">
+                <h5 class="product-title">Carro Formula 1 Motor V10</h5>
+                <p class="product-description">Diseño moderno y eficiente en combustible.</p>
+                <a href="@Url.Action("Detalles2", "Home")" class="btn btn-primary btn-sm">Ver detalles</a>
+                <a href="@Url.Action("Comprar2", "Home")" class="btn btn-primary btn-sm">Comprar</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="~/IMG/CarsMustang.jpeg" alt="Carro 3" class="product-img">
+            <div class="product-info">
+                <h5 class="product-title">Carro Mustang Personalizado V10</h5>
+                <p class="product-description">Elegancia y lujo para quienes buscan lo mejor.</p>
+                <a href="@Url.Action("Detalles3", "Home")" class="btn btn-primary btn-sm">Ver detalles</a>
+                <a href="@Url.Action("Comprar3", "Home")" class="btn btn-primary btn-sm">Comprar</a>
+            </div>
+        </div>
+    </div>
+</div>

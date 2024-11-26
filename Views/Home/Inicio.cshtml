@@ -1,0 +1,136 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">¡Bienvenido a Cars!</h1>
+        <p class="hero-subtitle">Encuentra el auto de tus sueños entre nuestra exclusiva selección de vehículos de alta calidad.</p>
+    </div>
+</div>
+
+<!-- Información sobre nosotros -->
+<section class="about-us py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>¿Por qué elegirnos?</h2>
+                <p>En Cars, nos especializamos en ofrecer autos de alta calidad, con opciones de financiamiento adaptadas a tus necesidades. Nuestra misión es hacer que tu experiencia de compra sea sencilla, rápida y satisfactoria. ¡Tu próximo auto está a solo un clic de distancia!</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="~/IMG/Cars inicio.jpeg" alt="Autos de calidad" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Características de los Autos -->
+<section class="features py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Características de Nuestros Vehículos</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature text-center">
+                    <img src="~/IMG/CarsCuchau.jpeg" alt="Calidad" class="feature-icon img-fluid">
+                    <h3>Alta Calidad</h3>
+                    <p>Todos nuestros autos son inspeccionados por expertos para garantizar que obtienes solo lo mejor.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature text-center">
+                    <img src="~/IMG/CarsModelo.jpg" alt="Soporte" class="feature-icon img-fluid">
+                    <h3>Soporte 24/7</h3>
+                    <p>Estamos disponibles para responder cualquier pregunta o duda que tengas, en cualquier momento.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature text-center">
+                    <img src="~/IMG/CarsLengua.jpg" alt="Financiamiento" class="feature-icon img-fluid">
+                    <h3>Fácil Financiamiento</h3>
+                    <p>Te ofrecemos opciones de financiamiento flexibles, adaptadas a tu presupuesto, para que puedas tener el auto que deseas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Slider de Productos -->
+<section id="productos" class="product-slider py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestros Modelos Más Populares</h2>
+        <div id="productCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Primer Item Activo -->
+                <div class="carousel-item active">
+                    <img src="~/IMG/CarsTres.jpg" class="d-block w-100" alt="Carro 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Carro 1</h5>
+                        <p>Potente y confiable. Ideal para aventuras y viajes largos.</p>
+                    </div>
+                </div>
+                <!-- Segundo Item -->
+                <div class="carousel-item">
+                    <img src="~/IMG/CarsBoca.jpg" class="d-block w-100" alt="Carro 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Carro 2</h5>
+                        <p>Elegante y eficiente. Perfecto para la ciudad y el día a día.</p>
+                    </div>
+                </div>
+                <!-- Tercer Item -->
+                <div class="carousel-item">
+                    <img src="~/IMG/CarsVS.jpg" class="d-block w-100" alt="Carro 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Carro 3</h5>
+                        <p>Lujo y comodidad en cada detalle, para los más exigentes.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Botones de navegación -->
+            <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonios -->
+<section class="testimonials py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Lo que dicen nuestros clientes</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial text-center">
+                    <p>"Estoy encantado con mi nuevo auto. Todo el proceso fue rápido y fácil, y el personal fue muy amable."</p>
+                    <footer>- Juan Pérez</footer>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial text-center">
+                    <p>"Excelente servicio. El financiamiento fue muy accesible, y el auto está en perfectas condiciones."</p>
+                    <footer>- Ana Gómez</footer>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial text-center">
+                    <p>"Recomiendo totalmente Cars. Me ayudaron a encontrar el auto perfecto y el soporte fue excepcional."</p>
+                    <footer>- Carlos López</footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Llamada a la acción -->
+<section class="cta py-5 text-center">
+    <div class="container">
+        <h2>¿Estás listo para encontrar tu auto ideal?</h2>
+        <p>Visítanos y descubre una amplia variedad de autos para todos los gustos y presupuestos.</p>
+        <a href="@Url.Action("Productos", "Home")" class="btn btn-primary btn-lg">Ver Productos</a>
+    </div>
+</section>

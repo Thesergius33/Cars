@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Comprar3";
+}
+<div class="container my-5">
+    <h1 class="text-center text-dark">Comprar Producto</h1>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <img src="~/IMG/CarsMustang.jpeg" alt="carros" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h2>Carro Mustang</h2>
+            <p class="text-muted">Precio: <span class="text-success">$60'000.000.00</span></p>
+            <input type="hidden" name="Id" value="#" />
+            <div class="form-group">
+                <label for="Cantidad">Cantidad</label>
+                <input type="number" id="Cantidad" name="Cantidad" class="form-control" value="1" min="1" required>
+            </div>
+            <div class="form-group mt-3">
+                <label for="Cliente">Nombre del Cliente</label>
+                <input type="text" id="Cliente" name="Cliente" class="form-control" placeholder="Ingresa tu nombre" required>
+            </div>
+            <a href="@Url.Action("Agradecimiento", "Home")" class="btn btn-primary btn-sm">Confirmar Compra</a>
+            <a href="@Url.Action("Productos", "Home")" class="btn btn-primary btn-sm">Cancelar</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title Cars</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="~/Content/Styles.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="~/IMG/CarsIcono.jpg" />
+</head>
+<body>
+    @if (ViewBag.Title != "Login" && ViewBag.Title != "Register")
+    {
+        <!-- Encabezado de navegación -->
+        <nav class="navbar navbar-expand-lg custom-navbar navbar-light shadow fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("Inicio", "Home")">
+                    <img src="~/IMG/CarsIcono.jpg" alt="Cars Icon" class="icon-navbar">
+                    <span class="brand-name">Cars</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            @Html.ActionLink("Inicio", "Inicio", "Home", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Productos", "Productos", "Home", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Contacto", "Contacto", "Home", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Login", "Login", "Home", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Register", "Register", "Home", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Sueña Tu Carro", "Index", "Carro", null, new { @class = "nav-link" })
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    }
+
+    <!-- Contenido principal -->
+    <main class="flex-shrink-0 container mt-5">
+        @RenderBody() <!-- Aquí se cargará el contenido de las vistas -->
+    </main>
+
+    <!-- Pie de página --> 
+    <footer class="mt-4 bg-dark text-white text-center py-2 fixed-bottom">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Cars. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- jQuery completo (necesario para Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+﻿/* Variables de colores */
+:root {
+    --color-primario: #007bff;
+    --color-secundario: #ff6f00;
+    --color-principal-hover: #0056b3;
+    --color-texto: #333;
+    --color-titulos: #222;
+}
+
+/* Configuración global */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: dimgrey;
+}
+
+.container, .header, .section, .about-us, .features, .team-member {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.text-center {
+    text-align: center;
+    color: black;
+}
+
+/* Header */
+.header {
+    background-color: darkred;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100px;
+    height: 50px;
+}
+
+/* Navbar */
+nav.custom-navbar {
+    background-color: darkred !important;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.custom-navbar .navbar-brand, .custom-navbar .brand-name, .navbar-nav .nav-link, .navbar-toggler-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.brand-name{
+    color: aliceblue !important;
+}
+
+.custom-navbar .brand-name {
+    margin-left: 10px;
+}
+
+.icon-navbar {
+    width: 150px; /* Cambia este valor al tamaño deseado */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-link {
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-transform: capitalize;
+}
+
+.nav-link {
+    color: aliceblue !important; /* Cambia este valor al color deseado */
+}
+
+    .navbar-nav .nav-link:hover {
+        color: var(--color-principal-hover); /* Color al pasar el cursor */
+        transform: scale(1.1);
+    }
+
+.navbar-toggler-icon {
+    border-radius: 3px;
+    width: 100px;
+    height: 50px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('~/IMG/Cars inicio.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+}
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+.hero-content {
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: var(--color-secundario);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* Secciones */
+.section, .about-us, .features {
+    margin-bottom: 30px;
+    background-color: floralwhite; /*Cambie aca*/
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de Agradecimiento */
+.agradecimiento-img {
+    width: 430px; /* Ajustar al 100% del contenedor */
+    height: auto; /* Mantener la proporción */
+    max-width: 500px; /* Tamaño máximo para no exceder */
+}
+
+/*Video de login*/
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Asegúrate de que el contenido esté delante del video */
+}
+
+/* Equipo */
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+    flex: 1 1 300px;
+    padding: 15px;
+    background-color: mediumvioletred;  /*Cambie aca*/
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+    .team-member img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    /*login*/
+.login-container {
+    max-width: 500px;
+    margin: auto;
+}
+
+.login-title {
+    font-size: 2rem;
+}
+
+.login-subtitle {
+    font-size: 1rem;
+}
+
+/*Register*/
+.register-container {
+    max-width: 500px;
+    margin: auto;
+}
+
+.register-title {
+    font-size: 2rem;
+}
+
+.register-subtitle {
+    font-size: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+
+/* Pie de página */
+footer {
+    background-color: floralwhite; /*cambie esto*/
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.footer-links ul, .footer-socials {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+    .footer-links a, .footer-socials a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        transition: color 0.3s ease;
+    }
+
+        .footer-links a:hover, .footer-socials a:hover {
+            color: var(--primary-color);
+        }
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Botones */
+.btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: lightseagreen; /*Cambie aca*/
+    color: white; /*Cambie aca*/
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: darkviolet; /*Cambie aca*/
+        transform: translateY(-2px);
+    }
+
+@media (max-width: 768px) {
+    .custom-navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
