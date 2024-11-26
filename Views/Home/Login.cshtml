@@ -4,7 +4,14 @@
 }
 
 <div class="video-background">
-    <video autoplay muted loop id="background-video"> <source src="~/VIDEO/Cars - Tuner Scene but in 4K - MorphyKid (1080p, h264, youtube).mp4" type="video/mp4"> Tu navegador no soporta el elemento de video. </video>
+    <video autoplay muted loop id="background-video">
+        <source src="~/VIDEO/Cars - Tuner Scene but in 4K - MorphyKid (1080p, h264, youtube).mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+    <audio id="background-audio" loop>
+        <source src="~/AUDIO/Tokyo Drift (Traducción al español) _ Rápidos y Furiosos. Reto Tokyo. - Pink Unicorn (youtube).mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
     <div class="container my-5">
         <div class="login-container bg-light p-5 rounded shadow-lg">
             <div class="text-center">
@@ -29,5 +36,24 @@
                 </p>
             </form>
         </div>
+        <!-- Botones de música y control de volumen fuera del cuadro -->
+        <div class="music-buttons text-center mt-4">
+            <button onclick="document.getElementById('background-audio').play()" class="btn btn-success mx-2">Reproducir Música</button>
+            <button onclick="document.getElementById('background-audio').pause()" class="btn btn-danger mx-2">Pausar Música</button>
+            <input type="range" id="volume-slider" class="mx-2" min="0" max="1" step="0.01" value="0.5">
+        </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var audio = document.getElementById('background-audio');
+        var volumeSlider = document.getElementById('volume-slider');
+        audio.volume = 0.5; // Volumen al 50%
+        volumeSlider.value = 0.5; // Posición de la barra de volumen al 50%
+
+        volumeSlider.addEventListener('input', function () {
+            audio.volume = this.value;
+        });
+    });
+</script>

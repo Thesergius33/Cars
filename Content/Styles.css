@@ -257,25 +257,6 @@ footer {
     overflow-x: hidden;
 }
 
-.footer-links ul, .footer-socials {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-    .footer-links a, .footer-socials a {
-        text-decoration: none;
-        color: var(--secondary-color);
-        transition: color 0.3s ease;
-    }
-
-        .footer-links a:hover, .footer-socials a:hover {
-            color: var(--primary-color);
-        }
-
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
