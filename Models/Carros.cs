@@ -11,17 +11,12 @@ namespace Cars.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Carros
     {
-        [Display(Name ="#")]
         public int Id { get; set; }
-        [Display(Name = "Nombre de la marca del carro: ")]
         public string Marca { get; set; }
-        [Display(Name = "Modelo del carro: ")]
         public string Modelo { get; set; }
-        [Display(Name = "Precio del carro: ")]
         public Nullable<decimal> Precio { get; set; }
     }
 }

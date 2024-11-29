@@ -8,11 +8,11 @@
         <source src="~/VIDEO/Cars - Tuner Scene but in 4K - MorphyKid (1080p, h264, youtube).mp4" type="video/mp4">
         Tu navegador no soporta el elemento de video.
     </video>
-    <!-- <audio id="background-audio" loop>
+    <audio id="background-audio" loop>
         <source src="~/AUDIO/Tokyo Drift (Traducción al español) _ Rápidos y Furiosos. Reto Tokyo. - Pink Unicorn (youtube).mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
-    </audio> -->
-    <div class="container d-flex justify-content-center align-items-center my-5" style="flex: 1;">
+    </audio>
+    <div class="container d-flex justify-content-center align-items-center my-2" style="flex: 1;">
         <div class="register-container bg-light p-5 rounded shadow-lg">
             <div class="text-center">
                 <h1 class="register-title text-dark mb-3">Crear Cuenta</h1>
@@ -37,23 +37,25 @@
                     <input type="password" class="form-control form-control-lg" id="confirmPassword" name="confirmPassword" placeholder="Confirma tu contraseña" />
                 </div>
                 <div class="text-center mt-4">
-                    <a href="@Url.Action("Login", "Home")" class="btn btn-primary btn-sm">Crear Cuenta</a>
+                    <button type="submit" class="btn btn-primary btn-sm">Crear Cuenta</button>
                 </div>
                 <p class="text-center mt-3">
                     ¿Ya tienes cuenta? <a href="@Url.Action("Login", "Home")" class="link-primary">Inicia sesión aquí</a>.
                 </p>
             </form>
         </div>
-        <!-- Botones de música y control de volumen fuera del cuadro
-        <div class="music-buttons text-center mt-4">
+    </div>
+    <!-- Botones de música y control de volumen fuera del cuadro -->
+    <div class="d-flex justify-content-center mt-2">
+        <div class="music-buttons text-center">
             <button onclick="document.getElementById('background-audio').play()" class="btn btn-success mx-2">Reproducir Música</button>
             <button onclick="document.getElementById('background-audio').pause()" class="btn btn-danger mx-2">Pausar Música</button>
             <input type="range" id="volume-slider" class="mx-2" min="0" max="1" step="0.01" value="0.5">
-        </div> -->
+        </div>
     </div>
 </div>
 
-<!-- <script>
+<script>
     document.addEventListener('DOMContentLoaded', function () {
         var audio = document.getElementById('background-audio');
         var volumeSlider = document.getElementById('volume-slider');
@@ -64,4 +66,4 @@
             audio.volume = this.value;
         });
     });
-</script> -->
+</script>

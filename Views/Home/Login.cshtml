@@ -18,11 +18,11 @@
                 <h1 class="login-title text-dark mb-3">Iniciar Sesión</h1>
                 <p class="login-subtitle text-muted mb-4">Accede a tu cuenta para explorar nuestras opciones de autos y mucho más.</p>
             </div>
-            <!-- Formulario de inicio de sesión -->
+            <!-- Formulario de inicio de sesión actualizado -->
             <form class="login-form" method="post" action="@Url.Action("Login", "Home")">
                 <div class="form-group mb-4">
-                    <label for="username" class="form-label text-dark">Usuario</label>
-                    <input type="text" class="form-control form-control-lg" id="username" name="username" placeholder="Ingresa tu usuario" />
+                    <label for="usernameOrEmail" class="form-label text-dark">Usuario o Correo Electrónico</label>
+                    <input type="text" class="form-control form-control-lg" id="usernameOrEmail" name="usernameOrEmail" placeholder="Ingresa tu usuario o correo electrónico" />
                 </div>
                 <div class="form-group mb-4">
                     <label for="password" class="form-label text-dark">Contraseña</label>
@@ -35,9 +35,10 @@
                     ¿No tienes cuenta? <a href="@Url.Action("Register", "Home")" class="link-primary">Regístrate aquí</a>.
                 </p>
             </form>
+
         </div>
         <!-- Botones de música y control de volumen fuera del cuadro -->
-        <div class="music-buttons text-center mt-4">
+        <div class="music-buttons text-center mt-3">
             <button onclick="document.getElementById('background-audio').play()" class="btn btn-success mx-2">Reproducir Música</button>
             <button onclick="document.getElementById('background-audio').pause()" class="btn btn-danger mx-2">Pausar Música</button>
             <input type="range" id="volume-slider" class="mx-2" min="0" max="1" step="0.01" value="0.5">

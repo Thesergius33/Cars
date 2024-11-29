@@ -13,7 +13,7 @@
 </head>
 <body>
     @if (ViewBag.Title != "Login" && ViewBag.Title != "Register")
-    {
+     {
         <!-- Encabezado de navegación -->
         <nav class="navbar navbar-expand-lg custom-navbar navbar-light shadow fixed-top">
             <div class="container">
@@ -48,19 +48,23 @@
                 </div>
             </div>
         </nav>
-    }
+     }
 
     <!-- Contenido principal -->
     <main class="flex-shrink-0 container mt-5">
         @RenderBody() <!-- Aquí se cargará el contenido de las vistas -->
     </main>
 
+    <!-- Pie de página -->
     <!-- Pie de página --> 
-    <footer class="mt-4 bg-dark text-white text-center py-2 fixed-bottom">
-        <div class="container">
-            <p class="mb-0">&copy; 2024 Cars. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    @if (ViewBag.Title != "Login" && ViewBag.Title != "Register")
+     {
+        <footer class="mt-4 bg-dark text-white text-center py-2 fixed-bottom"> 
+            <div class="container"> 
+                <p class="mb-0">&copy; 2024 Cars. Todos los derechos reservados.</p> 
+            </div> 
+        </footer>
+     }
 
     <!-- Scripts -->
     <!-- jQuery completo (necesario para Bootstrap JS) -->
